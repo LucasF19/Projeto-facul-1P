@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+:root{
+    --font-bold: 'Archivo Black', sans-serif;
+    --fonte-normal: 'Amiko', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ececec;
+}
+
+
+/* CONTAINER PRINCIPAL */
+
+.container{
+    display: flex;
+    width: 80%;
+    box-shadow: 5px 5px 10px #0909095e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilizando o lado esquerdo */
+
+.left-side{
+    width: 50%;
+    background-image: linear-gradient( 150deg, #003255, #008BC7);
+}
+
+.CentrLetra{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+
+.CentrLetra h1{
+    font-family: var(--font-bold);
+}
+
+.CentrLetra h2{
+    font-size: 14px;
+    font-weight: 200;
+    font-family: var(--fonte-normal);
+    margin: 15px 0px;
+}
+
+.login{
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--fonte-normal);
+    border-style: solid;
+    border-color: white;
+    color: white;
+    padding: 5px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s;
+    border-width: 2px;
+}
+
+.login:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Estilizando lado direito */
+.inputs{
+    font-family: var(--fonte-normal);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 25px;
+}
+
+.formulario{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.caixaInput{
+    margin-bottom: 20px;
+}
+
+.caixaInput label{
+    display: block;
+}
+
+.caixaInput input{
+    width: 220px;
+    margin: 0.2rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #ECECEC;
+}
+
+.caixaInput input::placeholder{
+    font-family: var(--fonte-normal);
+    font-weight: 700;
+}
+
+.caixaGenero h6{
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.boxInputs{
+    display: flex;
+}
+
+.generoInput{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.generoInput input{
+    margin-right: 0.3rem;
+}
+
+.botaoContinuar{
+    margin: 0px auto;
+}
+
+.botaoContinuar button{
+    background-color: #003459;
+    border-radius: 20px;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 40px;
+    width: 300px;
+}
+
+.botaoContinuar a{
+    font-family: var(--fonte-normal);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}

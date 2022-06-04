@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/Login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="assets/js/loginAni.js"></script>
+    <script src="https://kit.fontawesome.com/e3eb8e3d6b.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/icones/favicon.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body>
+    <div class="caixa">
+        <div class="inputs" id="fund">
+            <img class="logoModavo" id="logoMod" src="assets/imagens/Logo branca.svg" alt="Logo modavo">
+            <form class="formulario" action="#">
+                <div class="inputsLogin">
+                    <div class="caixaInput">
+                        <label for="login">Login</label>
+                        <input id="login" type="text" name="Login" placeholder="Login" required>
+                    </div>
+                    <div class="caixaInput">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="text" name="Senha" placeholder="Senha" required>
+                    </div>
+                </div>
+                <div class="below">
+                    <div class="inputCheck">
+                        <input type="checkbox" name="lembreDeMim" id="lembreDeMim">
+                        <label for="lembreDeMim">Lembre-se de mim</label>
+                    </div>
+                    <a href="">Esqueceu a senha?</a>
+                </div>
+                <div class="botaoC">
+                    <input class="botaoConfirmar" type="submit" value="confirmar">
+                </div>
+            </form>
+        </div>  
+        <div class="right-side">
+            <div onclick="darkmode()" class="modoEscuro">
+                <input type="checkbox" class="checkbox" id="chk">
+
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="CentrLetra">
+                <h1>Login</h1>
+                <h2>Não tem conta?</h2>
+                <a class="cadastre" href="cadastro.html">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

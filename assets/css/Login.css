@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+:root{
+    --font-bold: 'Archivo Black', sans-serif;
+    --fonte-normal: 'Amiko', sans-serif;
+    --background: white;
+    --text: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ececec;
+    transition: 0.2s linear;
+}
+
+/* Modo escuro aplicando a classe */
+.dark{
+    background-color: #2d2d2d;
+}
+
+.caixa{
+    display: flex;
+    box-shadow: 5px 5px 15px #0909095e;
+    border-radius: 10px;
+    width: 70%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.logoModavo{
+    width: 35vh;
+    margin-bottom: 20px;
+}
+
+/* Lado direito */
+.right-side{
+    width: 50%;
+    font-size: 18px;
+    background-image: linear-gradient( 150deg, #003255, #008BC7);
+}
+
+.centralizado{
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CentrLetra{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 1px 6px 13px #00000054;
+    background-image: linear-gradient(to bottom, #1A58A0, #77DEEC);
+    align-items: center;
+    height: 100%;
+}
+
+.CentrLetra h1{
+    font-family: var(--font-bold);
+    text-transform: uppercase;
+}
+
+.CentrLetra h2{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: var(--fonte-normal);
+    margin: 15px 0px;
+}
+
+.cadastre{
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--fonte-normal);
+    border-style: solid;
+    border-color: white;
+    color: white;
+    padding: 8px 30px;
+    font-size: 16px;
+    transition: 0.2s;
+    border-width: 2px;
+}
+
+.cadastre:hover{
+    color: black;
+    background-color: white;
+}
+
+
+/* Lado esquerdo */
+body.dark{
+    background: #003255;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: absolute;
+    height: 26px;
+    margin: 10px;
+    width: 50px;
+    transform: scale(1.0);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: 0.3s;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translate(24px);
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+
+.fa-sun{
+    color: #F39c12;
+}
+
+
+.formulario{
+    width: 100%;
+}
+
+.inputs{
+    font-family: var(--fonte-normal);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 10px 25px;
+    justify-content: center;
+}
+
+.caixaInput{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.caixaInput label{
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.caixaInput input{
+    width: 100%;
+    margin: 0.2rem 0;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ECECEC;
+}
+
+.caixaInput input::placeholder{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--fonte-normal);
+    color: #b1b1b1;
+}
+
+.below{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.inputCheck{
+    display: flex;
+}
+
+#lembreDeMim{
+    width: 25px;
+    height: 17px;
+    margin-right: 5px;
+}
+
+.botaoConfirmar{
+    font-family: var(--fonte-normal);
+    color: white;
+    background-color: #003459;
+    border-radius: 20px;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 40px;
+    width: 300px;
+}
+
+.botaoC{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
