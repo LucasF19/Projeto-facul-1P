@@ -2,7 +2,9 @@ const body = document.querySelector("body");
 const checkbox = document.getElementById('chk');
 const img = document.getElementById("logoMod");
 
-const pegarCores = (element, style) => window.getComputedStyle(element).getPropertyValue(style);
+function pegarCores(element, style) {
+    return window.getComputedStyle(element).getPropertyValue(style);
+}
 
 const coresIniciais = {
     bgBody: pegarCores(body, "--bg-body"),
@@ -10,9 +12,10 @@ const coresIniciais = {
     bgPlaceholder: pegarCores(body, "--bg-placeholder"),
     textColor: pegarCores(body, "--text-color"),
     textPlacehold: pegarCores(body, "--text-placeholder"),
+    dataColor: pegarCores(body, "--data-color"),
     linear1: pegarCores(body, "--linear1"),
     linear2: pegarCores(body, "--linear2"),
-    inputFocus: pegarCores(body, "--input-focus"),
+    inputFocus: pegarCores(body, "--input-focus-bg"),
 }
 
 const modoEscuro = {
@@ -20,13 +23,16 @@ const modoEscuro = {
     bgLogin: "#2e2e2e",
     bgPlaceholder: "#5a5a5a",
     textColor: "#f5f5f5",
-    textPlacehold: "#343434",
+    textPlacehold: "#9f9f9f",
+    dataColor: "#9f9f9f",
     linear1: "#002d52",
     linear2: "#0058a1",
-    inputFocus: "#3c3c3c",
+    inputFocus: "#383838",
 }
 
-const transformarChave = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+function transformarChave(key) {
+    return "--" + key.replace(/([A-Z])/, "-$1").toLowerCase();
+}
 
 const mudarCores = (cores) => {
     Object.keys(cores).map(key => 
@@ -42,15 +48,8 @@ if (CorModo) {
 }
 
 checkbox.addEventListener("change", ({target}) =>{
-    if(checkbox.checked == true){
-        img.setAttribute("src","assets/imagens/Logo modavo modo escuro.svg")
-    } else {
-        img.setAttribute("src", "assets/imagens/Logo modavo modo claro.svg")
-    }
-
-
-    localStorage.setItem('color-mode', target.checked)
     target.checked ? mudarCores(modoEscuro) : mudarCores(coresIniciais)
     
+    localStorage.setItem('color-mode', target.checked)
 })
 

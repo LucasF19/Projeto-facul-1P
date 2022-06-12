@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-:root{
+html{
     --font-bold: 'Archivo Black', sans-serif;
     --fonte-normal: 'Amiko', sans-serif;
+
+    --bg-body: #ffffff;
+    --bg-login: #ffffff;
+    --text-color: #404040;
+    --text-placeholder: #717171;
+    --bg-placeholder: #f0f0f0;
+    --linear1: #1A58A0;
+    --linear2: #77DEEC;
+    --data-color: #717171;
+    --outline-color: #648dff;
+    --input-focus: #cecece;
 }
 
 *{
@@ -18,37 +29,77 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ececec;
+    background-color: var(--bg-body);
 }
 
 
 /* CONTAINER PRINCIPAL */
-
-.container{
+.caixa{
     display: flex;
     width: 80%;
     box-shadow: 5px 5px 10px #0909095e;
     border-radius: 10px;
     overflow: hidden;
+    color: var(--text-color);
 }
 
 /* Estilizando o lado esquerdo */
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: #373737;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: absolute;
+    height: 26px;
+    margin: 10px;
+    width: 50px;
+    transform: scale(1.0);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: 0.3s;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translate(24px);
+}
+
+.fa-moon, .fa-sun{
+    color: #f1c40f;
+}
 
 .left-side{
     width: 50%;
-    background-image: linear-gradient( 150deg, #003255, #008BC7);
+    text-shadow: 1px 6px 13px #00000054;
+    background-image: linear-gradient(to bottom, var(--linear1), var(--linear2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .CentrLetra{
     display: flex;
     flex-direction: column;
-    height: 100%;
     align-items: center;
     color: white;
     text-transform: uppercase;
-    text-align: center;
-    position: relative;
-    top: 40%;
+    font-size: 18px;
 }
 
 .CentrLetra h1{
@@ -90,7 +141,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: var(--bg-login);
     padding: 25px;
 }
 
@@ -117,12 +168,19 @@ body{
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 20px;
-    background-color: #ECECEC;
+    background-color: var(--bg-placeholder);
+    font-weight: 600;
+    color: var(--data-color);
+}
+
+.caixaInput input:focus{
+    background-color: var(--input-focus);
+
 }
 
 .caixaInput input::placeholder{
+    color: var(--text-placehold);
     font-family: var(--fonte-normal);
-    font-weight: 700;
 }
 
 .caixaGenero h6{
