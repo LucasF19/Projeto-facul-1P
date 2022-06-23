@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@font-face {
+    font-family: 'Amiko';
+    src: url('../fontes/Amiko/Amiko-Regular.ttf');
+
+    font-family: 'Archivo Black';
+    src: url('../fontes/ArchivoBlack/ArchivoBlack-Regular.ttf');
+}
 
 html{
     --font-bold: 'Archivo Black', sans-serif;
@@ -22,7 +27,6 @@ html{
 }
 
 body{
-    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -36,7 +40,6 @@ body{
     box-shadow: 5px 5px 15px #0909095e;
     border-radius: 10px;
     width: 70%;
-    height: 70vh;
     overflow: hidden;
 }
 
@@ -106,8 +109,7 @@ body{
 
 .CentrLetra h2{
     text-transform: uppercase;
-    font-size: 14px;
-    font-family: var(--fonte-normal);
+    font-size: 15px;
     margin: 15px 0px;
 }
 
@@ -149,8 +151,12 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: var(--bg-login);
-    padding: 0px 25px;
+    padding: 25px;
     justify-content: center;
+}
+
+.inputCheck{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .inputs-login{
@@ -161,6 +167,10 @@ body{
     font-size: 15px;
     margin-bottom: 25px;
     font-weight: 700;
+}
+
+.caixaInput:nth-child(2){
+    margin: 10px 0px;
 }
 
 .caixaInput label{
@@ -176,7 +186,9 @@ body{
     border: none;
     border-radius: 20px;
     background-color: var(--bg-placeholder);
+    color: var(--text-color);
 }
+
 
 .caixaInput input:focus{
     background-color: var(--input-focus);
@@ -213,4 +225,67 @@ body{
     cursor: pointer;
     padding: 10px 40px;
     width: 300px;
+    transition: 0.3s;
 }
+
+.botaoConfirmar:hover{
+    background-color: #061a29;
+}
+
+.cadastre-respon{
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.cadastre-respon p{
+    margin-bottom: 0;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 1200px) {
+    .logoModavo{
+        width: 80%;
+    }
+
+
+    .right-side{
+        display: none;
+    }
+
+    .caixa{
+        width: 400px;
+        height: auto;
+        align-items: center;
+    }
+
+    .inputs{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .cadastre-respon{
+        display: block;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .caixa{
+        width: 100%;
+        height: 100%;
+    }
+
+    .inputs{
+        padding: 15px;
+    }
+
+    .below {
+        font-size: 15px;
+    }
+}
+

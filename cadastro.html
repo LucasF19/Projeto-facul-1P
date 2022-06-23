@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="bootstrap.css">
     <script src="https://kit.fontawesome.com/e3eb8e3d6b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="assets/imagens/icones/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="assets/imagens/icones/favicon.ico" type="image/x-icon">
+    <!-- DELE-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <title>Tela de cadastro</title>
 </head>
 <body>
@@ -32,8 +35,8 @@
         <div class="inputs">
             <form class="formulario" action="#">
                 <div class="caixaInput">
-                    <label for="primeiroNome">Nome</label>
-                    <input type="text" name="primeiroNome" id="primeiroNome" placeholder="Nome" required>
+                    <label aria-checked="true" for="primeiroNome">Nome</label>
+                    <input minlength="15" maxlength="60" type="text" name="primeiroNome" id="primeiroNome" placeholder="Nome" required>
                 </div>
                 <div class="caixaInput">
                     <label for="DataNascimento">Data de Nascimento</label>
@@ -45,7 +48,7 @@
                 </div>
                 <div class="caixaInput">
                     <label for="Cpf">Cpf</label>
-                    <input type="number" name="Cpf" id="Cpf" placeholder="000.000.000-00" required>
+                    <input type="text" name="Cpf" id="cpf" placeholder="000.000.000-00" onkeypress="$(this).mask('000.000.000-00');" required>
                 </div>
                 <div class="caixaInput">
                     <label for="nomeDaMae">Nome da mãe</label>
