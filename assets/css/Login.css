@@ -247,6 +247,11 @@ body{
 }
 
 @media screen and (max-width: 1200px) {
+    .modoEscuro{
+        display: none;
+    }
+
+
     .logoModavo{
         width: 80%;
     }
